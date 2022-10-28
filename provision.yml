@@ -1,0 +1,22 @@
+---
+- hosts: Gitlab
+  become: yes
+
+  tasks:
+    - name: Build swap partition
+      include_role:
+        name: swap
+      tags:
+        - always
+    
+    - name: Build nginx Webserver
+      include_role:
+        name: webserver
+      tags:
+        - always
+
+    - name: Build Gitlab-CE
+      include_role:
+        name: gitlab
+      tags:
+        - always

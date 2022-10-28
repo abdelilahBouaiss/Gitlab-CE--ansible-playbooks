@@ -1,0 +1,6 @@
+
+Gitlab :
+ hosts :
+  Gitlab:
+    ansible_host : 192.169.142.11
+    ansible_sudo_pass : ansiblepass
